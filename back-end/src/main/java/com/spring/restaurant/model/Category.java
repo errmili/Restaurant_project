@@ -5,12 +5,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import java.util.Set;
 
 // id & name
 @Data // getter and setter
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
 public class Category extends CategoryOrder{
-    private Long id;
+
+    @OneToMany(mappedBy = "category")
+    private Set<Order> orders;
+
 }
