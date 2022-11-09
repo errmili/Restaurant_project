@@ -18,7 +18,9 @@ public class Order extends CategoryOrder{
     private int price;
     @Column
     private String img;
+
     @Column
+    @Lob
     private String description;
 
     @ManyToOne
