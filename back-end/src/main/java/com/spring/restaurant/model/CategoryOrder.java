@@ -19,10 +19,10 @@ import java.util.Date;
 public class CategoryOrder extends BaseEntity{
     private String name;
 
-    @Column(name = "date_create")
+    @Column(name = "data_create")
     @CreationTimestamp
     private Date datecreate;
 
-    @Column(name = "date_update")
+    @Column(name = "data_update")
     private Date dateupdate;
 }
