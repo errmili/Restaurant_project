@@ -3,24 +3,25 @@ import { Category } from 'src/app/model/category';
 import { CategoryServiceService } from 'src/app/service/category-service.service';
 
 @Component({
-  selector: 'app-category-items',
-  templateUrl: './category-items.component.html',
-  styleUrls: ['./category-items.component.css']
+  selector: 'app-dropdown-menu',
+  templateUrl: './dropdown-menu.component.html',
+  styleUrls: ['./dropdown-menu.component.css']
 })
-export class CategoryItemsComponent implements OnInit {
+export class DropdownMenuComponent implements OnInit {
 
   categories: Category[] = [];
+
   constructor(private categoryService: CategoryServiceService) { }
 
   ngOnInit(): void {
-    this.getCategories();
+    this.getAllCategory();
   }
 
-  getCategories(){
+  getAllCategory(){
     this.categoryService.getAllCategories().subscribe(
       data => {
-        console.log(data);
         this.categories = data
+        console.log(data)
       }
     )
   }

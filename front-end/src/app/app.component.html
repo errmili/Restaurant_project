@@ -37,12 +37,8 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Categories
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
+
+            <app-dropdown-menu></app-dropdown-menu>
           </li>
 
         </ul>
@@ -61,16 +57,18 @@
   <!-- Start Order -->
   <nav class="maindiv">
     <div class="container">
-          <app-order-items></app-order-items>
+
+        <router-outlet></router-outlet>
+          <!-- <app-order-items></app-order-items> -->
       </div>
   </nav>
   <!-- ======= Footer ======= -->
   <footer id="footer">
     <div class="container">
       <div class="credits">
-        Designed by <a href="https://www.facebook.com/eslam.khder.98" target="_blank">Eslam Khder</a>
+        Designed by <a href="https://www.linkedin.com/in/jaouad-errmili-49a974169/" target="_blank">JAOUAD ERRMILI 🥇</a>
       </div>
     </div>
   </footer><!-- End  Footer -->
 
-  <a href="#" class="back-to-top"><i class="fas fa-arrow-alt-circle-up"></i></a>
+  <a href="#"  class="back-to-top"><i class="fas fa-arrow-alt-circle-up"></i></a>
